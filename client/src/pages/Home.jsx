@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
 import state from '../store';
+import { CustomButton } from '../components';
+
 import { 
     headContainerAnimation,
     headContentAnimation,
@@ -16,7 +18,7 @@ const Home = () => {
   return (
     <AnimatePresence>
         {snap.intro && (
-            <motion.section clasName='home' {...slideAnimation('left')}>
+            <motion.section className='home' {...slideAnimation('left')}>
                 <motion.header {...slideAnimation("down")}>
                     <img
                     src='./threejs.png'
@@ -32,16 +34,19 @@ const Home = () => {
                         </h1>
                     </motion.div>
                     <motion.div>
-                        <p className="max-wmd font-normal text-gray-600 text-base">
-                            Create your unique and exclusive shirty with our brand-new 3D customization toll. <strong> Unleash your imagination</strong>{" "} and define your own style.
+                        <p className="max-w-md font-normal text-gray-600 text-base">
+                            Create your unique and exclusive shirty with our brand-new 3D customization tool. <strong> Unleash your imagination</strong>{" "} and define your own style.
                         </p>
+                        <CustomButton
+                            type= "filled"
+                            title="Customize It"
+                            handleClick={() => state.intro = false}
+                            customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+                        />
                     </motion.div>
-
                 </motion.div>
-
             </motion.section>
         )}
-    
     </AnimatePresence>
   )
 }
