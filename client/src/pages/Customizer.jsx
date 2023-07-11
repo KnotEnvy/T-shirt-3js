@@ -58,8 +58,9 @@ const Customizer = () => {
       const response = await fetch('https://t-shirt-3js.onrender.com', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json' 
         },
+        
         body: JSON.stringify({
           prompt, 
 
