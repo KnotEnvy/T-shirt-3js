@@ -54,8 +54,8 @@ const Customizer = () => {
     try{
       // call our backend to generate an ai image!
       setGeneratingImg(true);
-
-      const response = await fetch('http://localhost:8080/api/v1/dalle', {
+      //server host
+      const response = await fetch('https://t-shirt-3js.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
