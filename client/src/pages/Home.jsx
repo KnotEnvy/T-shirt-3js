@@ -30,7 +30,7 @@ const Home = () => {
                     <motion.div {...headTextAnimation}
                     className="flex flex-col gap-5">
                         <h1 className="head-text">
-                            LET' S <br className="x1:block hidden" /> DO IT!
+                            ARE <br className="x1:block hidden" /> YOU READY??
                         </h1>
                     </motion.div>
                     <motion.div>
